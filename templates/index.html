@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Habit Tracker</title>
+</head>
+<body>
+    <h1>Mera Habit Tracker</h1>
+    
+    <!-- Habit add karne ka form -->
+    <form action="/add" method="post">
+        <input type="text" name="habit" placeholder="Habit likho...">
+        <button type="submit">Add Habit</button>
+    </form>
+
+    <!-- Habits ki list -->
+    <h2>Meri Habits:</h2>
+    <ul>
+        {% for habit in habits %}
+            <li>{{ habit }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
